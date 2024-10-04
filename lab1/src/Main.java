@@ -15,6 +15,13 @@ public class Main {
             System.out.println("3 - Лететь");
             System.out.println("0 - Выйти");
 
+            // Проверяем, введено ли число
+            if (!scanner.hasNextInt()) {
+                System.out.println("Ошибка: Введите корректное число.");
+                scanner.next(); // Пропускаем неверный ввод
+                continue;
+            }
+
             int choice = scanner.nextInt();
 
             if (choice == 0) {
@@ -40,9 +47,23 @@ public class Main {
 
             // Ввод новых координат
             System.out.println("Введите координаты, куда переместить героя:");
+
+            // Проверяем корректность ввода координаты X
             System.out.print("X: ");
+            if (!scanner.hasNextInt()) {
+                System.out.println("Ошибка: Введите корректное число для X.");
+                scanner.next(); // Пропускаем неверный ввод
+                continue;
+            }
             int newX = scanner.nextInt();
+
+            // Проверяем корректность ввода координаты Y
             System.out.print("Y: ");
+            if (!scanner.hasNextInt()) {
+                System.out.println("Ошибка: Введите корректное число для Y.");
+                scanner.next(); // Пропускаем неверный ввод
+                continue;
+            }
             int newY = scanner.nextInt();
 
             // Перемещаем героя
