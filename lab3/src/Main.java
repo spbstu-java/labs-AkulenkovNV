@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         try {
-            DictionaryLoader loader = new DictionaryLoader("C:/Users/paska/Учеба/ООП_3КУРС/lab3/src/dictionary.txt");
+            DictionaryLoader loader = new DictionaryLoader("src/dictionary.txt");
             Translator translator = new Translator(loader.getDictionary());
 
             Scanner scanner = new Scanner(System.in);
